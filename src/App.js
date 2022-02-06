@@ -1,23 +1,21 @@
 import logo from './logo.svg';
+import React, {useState} from 'react';
+import Input from './components/input/Input.jsx';
+import Teaxtarea from './components/textarea/Textarea.jsx';
 import './App.css';
 
 function App() {
+  const [title, setTitle] = useState("title");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input
+        name = "Mihail"
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+      />
+      <Teaxtarea
+        name = "textarea"
+      />
     </div>
   );
 }

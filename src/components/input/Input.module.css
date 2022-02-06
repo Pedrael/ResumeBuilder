@@ -1,0 +1,9 @@
+.customInput {
+}
+
+.customInput>input {
+  border: 1px solid #2a2a2e;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+}
