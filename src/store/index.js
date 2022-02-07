@@ -1,39 +1,39 @@
 // here will be Redux store...
 
 import {createStore} from "redux";
-//import {composeWithDevTools} from "redux-devtools-extension";
+import {composeWithDevTools} from "redux-devtools-extension";
 //import createSagaMiddleware from "redux-saga";
 
 //const sagaMiddleware = createSagaMiddleware();
 
 const defaultState = {
   generalData: {
-    title: '',
+    fullname: '',
     teaser: '',
     email: '',
     github: '',
     position: '',
-    NOC: undefined
+    NOC: ''
   },
   technicalStack: [],
   experience: [],
   languages: []
 }
 
-const SET_TICKER = "SET_TICKER";
+const SET_GENERAL = "SET_GENERAL";
 
 const reducer = (state = defaultState, action) => {
   switch(action.type) {
 
-    case SET_TICKER: {
-      return {...state, oldValue: [...state.newValue], newValue: [...action.payload] }
+    case SET_GENERAL: {
+      return {...state, generalData: {...action.payload} }
     }
 
     default: return state;
   }
 }
 
-export const setTickerAction = (payload) => ({type: SET_TICKER, payload});
+export const setGeneralAction = (payload) => ({type: SET_GENERAL, payload});
 
 // const composedEnchancer = compose(applyMiddleware(sagaMiddleware), composeWithDevTools());
 // applyMiddleware should be first otherwise sagas won`t work

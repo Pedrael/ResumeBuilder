@@ -1,9 +1,14 @@
 .customInput {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .customInput>input {
-  border: 1px solid #2a2a2e;
-  border-radius: 8px;
+  border: 2px solid var(--main-accent-color);
+  background-color: var(--main-accent-light);
+  border-radius: var(--border-radius);
   padding: 10px;
   margin: 10px;
 }

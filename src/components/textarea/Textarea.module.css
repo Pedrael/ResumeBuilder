@@ -1,0 +1,17 @@
+.customTextarea div {
+  border: 2px solid var(--main-accent-color);
+  background-color: var(--main-accent-light);
+  border-radius: var(--border-radius);
+}
+
+.customTextarea textarea {
+  background-color: var(--main-accent-light);
+  width: 100%;
+  resize: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border-style: inset;
+  box-shadow: none;
+  padding: 10px;
+}

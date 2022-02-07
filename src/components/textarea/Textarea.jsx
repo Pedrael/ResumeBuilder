@@ -5,7 +5,10 @@ const Textarea = (props) => {
 
   return (
     <label className={classes.customTextarea}>
-      {props.name} <textarea {...props} />
+      {props.name}
+      <div>
+        <textarea {...props} />
+      </div>
     </label>
   )
 }
